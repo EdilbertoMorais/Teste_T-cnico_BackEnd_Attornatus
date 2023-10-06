@@ -60,9 +60,9 @@ Usando Spring Boot, crie uma API simples para gerenciar Pessoas. Esta API dever 
   - H2 Database
   - Spring Boot DevTools
 
-### 2 - Definição das Entidades
+### 2 - Definição das Entidades:
 
-- Criei as entidades Pessoa e Endereco com os campos especificados, incluindo relacionamentos entre elas. Utilize as anotações @Entity, @Id, @GeneratedValue, etc.
+- Criei as entidades Pessoa e Endereco com os campos especificados, incluindo relacionamentos entre elas. Utilizei as anotações @Entity, @Id, @GeneratedValue, etc.
 
 ```java
 @Entity
@@ -102,7 +102,7 @@ public class Endereco {
 ```
 
 
-### 3 - Criação dos Repositórios
+### 3 - Criação dos Repositórios:
 - Criei interfaces de repository para as entidades Pessoa e Endereco, estendendo JpaRepository.
 
 ```java
@@ -114,7 +114,7 @@ public interface PessoaRepository extends JpaRepository<Pessoa, Long> {
 public interface EnderecoRepository extends JpaRepository<Endereco, Long> {
 }
 ```
-### 4 - Implementação dos Controllers
+### 4 - Implementação dos Controllers:
 - Implementei os controllers REST para gerenciar operações CRUD para Pessoa e Endereco.
 ```java
   @RestController
@@ -129,7 +129,7 @@ public class EnderecoController {
     // Implementei os métodos para criar, listar e definir o endereço principal da pessoa
 }
 ```
-### 5 - Configuração do Banco de Dados H2
+### 5 - Configuração do Banco de Dados H2:
 - Configurei o H2 Database no arquivo application.properties com as configurações de URL, usuário e senha.
 
 ```properties
@@ -141,13 +141,13 @@ spring.jpa.hibernate.ddl-auto=update
 spring.h2.console.enabled=true
 spring.h2.console.path=/h2-console
 ```
-### 6 - Implementação de Testes Unitários
+### 6 - Implementação de Testes Unitários:
 - Criei testes unitários para os controllers, entidades, repository e serviços para garantir que as operações CRUD funcionem conforme o esperado.
 
-### 7 - Respostas em JSON
+### 7 - Respostas em JSON:
 - Todas as respostas da API retornam dados em formato JSON.
 
-### 8 - Teste das Operações da API
+### 8 - Teste das Operações da API:
 - Testei as operações da API usando a própria IDE IntelliJ para realizar chamadas POST, GET e UPDATE.
 ---
 > Status do Projeto: Concluido :heavy_check_mark:
